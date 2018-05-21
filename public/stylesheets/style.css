@@ -10,215 +10,161 @@ body {
 		margin: 0;
 		padding: 0;
 }
-.navbar-brand {
-padding: 0px;
-}
-.navbar-brand>img {
-height: 100%;
-padding: 10px;
-width: auto;
-}
 
-#staff{
-	margin-top:10px;
-}
-
-.card-text{
-	font-size:60%;
-	text-align:left;
-}
-.swiper-testemonies{
-	width: 60%;
-	height: 60%;
-	padding: 10px;
-	float: none;
-	margin: 0 auto;
-	color:black;
-}
-.swiper-staff{
-	width: 60%;
-	height: 60%;
-	padding: 10px;
-	float: none;
-	margin: 0 auto;
-	color:black;
-}
-.swiper-container {
-/*width: 79%;*/
-width:100%;
-height: 75%;
-margin-bottom: 5px;
-margin-top: 85px;
-
+/*----- Section 1 typewriter -----*/
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .3em solid #20C20E; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3s steps(30, end),
+    blink-caret .7s step-end infinite;
 }
 
-/*simi*/
-@media (max-width: 480px) {
-/*	.card-text{
-		font-size:10px;
-		text-align:left;
-	}*/
-
-	#staff-text{
-		margin-top:10px;
-	}
-	.swiper-testemonies{
-		width: 100%;
-		height: 100%;
-		padding: 10px;
-		float: none;
-		margin: 0 auto;
-		color:black;
-	}
-	.swiper-staff{
-		width: 100%;
-		height: 100%;
-		padding: 10px;
-		float: none;
-		margin: 0 auto;
-		color:black;
-	}
-	.swiper-container {
-			width:100%;
-			height: 70%;
-
-	}
-	.swiper-slide {
-			text-align: center;
-			font-size: 18px;
-			background: #fff;
-
-
-			background-position: center;
-			background-size: cover;
-
-			/* Center slide text vertically */
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			-webkit-justify-content: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			-webkit-align-items: center;
-			align-items: center;
-	}
-}
-/*-------Sími ends------------------------*/
-
-#swiper-box{
-	padding-top: 125px;
-	padding-bottom: 125px;
-	padding-right: 75px;
-	padding-left: 75px;
-	margin-top: 0px;
-	margin-bottom: 25px;
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-.swiper-slide {
-		text-align: center;
-		font-size: 18px;
-		background: #fff;
-
-
-		background-position: center;
-		background-size: cover;
-
-		/* Center slide text vertically */
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		-webkit-align-items: center;
-		align-items: center;
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #20C20E }
 }
-
-.btn:active{
-    outline: none;
-		text-decoration : none
-}
-#downButton:hover{
-	text-decoration : none;
-	border-color:#1E88E5;
-}
-
+/*----------------------------------------*/
+* { color:#fff; text-decoration: none;}
 /*----------Sections-------------------*/
 
+#photos {
+   /* Prevent vertical gaps */
+   line-height: 0;
+
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+/*  height: auto !important;*/
+}
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
 
 #section1 {
+	background: #000;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
 /*padding-top: 150px;*/
-padding-bottom: 125px;
+/*padding-bottom: 125px;
 padding-right: 75px;
 padding-left: 75px;
 margin-top: 0px;
-margin-bottom: 5px;
+margin-bottom: 5px;*/
+height: 405px;
+width: 100%;
+height: 100%;
 color: #fff;
-background-color: #0275D8;
 text-decoration : none}
 #section2 {
-	padding-top: 125px;
+	/*padding-top: 125px;
 	padding-bottom: 125px;
 	padding-right: 75px;
 	padding-left: 75px;
 	margin-top: 0px;
-	margin-bottom: 5px;
-	color: #fff;
-	background-color: #0275D8;}
+	margin-bottom: 5px;*/
+	padding-top: 100px;
+	width: 100%;
+	height: 100%;
+	background-color:#eee;
+	  text-align: center;
+	  color:#000;
+}
+
+#section2 h1{
+	color:#000;
+}
+
 #section3 {
-	padding-top: 125px;
-	padding-bottom: 125px;
-	padding-right: 75px;
-	padding-left: 75px;
-	margin-top: 0px;
-	margin-bottom: 5px;
+
+	display: block;
+	padding-top: 100px;
+	width: 100%;
+	/*height: 100%;*/
 	color: #fff;
 	background-color: #0275D8;}
 #section4 {
-	padding-top: 125px;
-	padding-bottom: 125px;
-	padding-right: 75px;
-	padding-left: 75px;
-	margin-top: 0px;
-	margin-bottom: 5px;
-	color: #fff;
-	background-color: #0275D8;}
+
+	display: block;
+	padding-top: 100px;
+	width: 100%;
+	/*height: 100%;*/
+	color: #000;
+	background-color: #f7f7f9;}
 #section5 {
-	padding-top: 125px;
-	padding-bottom: 125px;
-	padding-right: 75px;
-	padding-left: 75px;
-	margin-top: 0px;
-	margin-bottom: 5px;
-	color: #fff;
-	background-color: #0275D8;}
+	display: block;
+	padding-top: 100px;
+	width: 100%;
+	color: #000;
+	background-color: #ffff;
+}
 	.section6 {
-	padding-top: 75px;
-	padding-bottom: 125px;
-	padding-right: 75px;
-	padding-left: 75px;
-	margin-top: -5px;
-	margin-bottom: 5px;
-	color: #fff;
-	background-color: #0275D8;}
+		display: block;
+		padding-top: 100px;
+		width: 100%;
+		color: #000;
+		background-color: #ffff;}
 
 	#section7{
-		padding-top: 150px;
-		padding-bottom: 125px;
-		padding-right: 75px;
-		padding-left: 75px;
-		margin-top: 0px;
-		margin-bottom: 5px;
-		color: #fff;
-		background-color: #0275D8;
+		display: block;
+		padding-top: 100px;
+		width: 100%;
+		color: #fefefe;
+		background-color: #ffff;
 	}
 	/*---------Section ends---------------------*/
 
@@ -229,6 +175,7 @@ background-image:url('https://s26.postimg.org/4g7hn0wpl/hm_Photo.jpg');
 margin:0; /* If you want no margin */
 padding:0; /*if your want to padding */
 }
+
 
 /*#testa-left{
 background-color:orange;
